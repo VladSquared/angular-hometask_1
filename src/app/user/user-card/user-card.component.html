@@ -1,0 +1,12 @@
+<div class="user-card">
+  <h4>User {{ user.firstName }} {{ user.lastName }}</h4>
+  <p>Age: {{ user.age }}</p>
+  <p>Gender: {{ user.gender }}</p>
+  <p>Status: {{ user.activated ? 'Active' : 'Inactive' }}</p>
+
+  <button (click)="toggleActivation()" [ngClass]="user.activated ? 'deactivate' : 'activate'">
+    {{ user.activated ? 'Deactivate' : 'Activate' }}
+  </button>
+
+  <button class="delete" (click)="deleteUser()">Delete</button>
+</div>
